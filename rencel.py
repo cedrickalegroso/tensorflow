@@ -20,7 +20,7 @@ export_dir = os.path.abspath(export_dir)
 
 image_path = tf.keras.utils.get_file(
       'thesis_dataset.tgz',
-      'https://www.mediafire.com/file/23p5kmzg7xwubck/thesis_dataset.tgz/file',
+      'https://firebasestorage.googleapis.com/v0/b/cedrickmalakas-2f178.appspot.com/o/thesis_dataset.tgz?alt=media&token=1d2903a5-22fd-4a1a-9087-ace9fe8cf9a8',
       extract=True)
 image_path = os.path.join(os.path.dirname(image_path), 'thesis_dataset')
 
