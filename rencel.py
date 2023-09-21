@@ -13,6 +13,10 @@ from tflite_model_maker.image_classifier import DataLoader
 
 import matplotlib.pyplot as plt
 
+export_dir = '/home/rencel'
+export_dir = os.path.abspath(export_dir)
+
+
 
 image_path = tf.keras.utils.get_file(
       'flower_photos.tgz',
@@ -68,6 +72,9 @@ for i, (image, label) in enumerate(test_data.gen_dataset().unbatch().take(100)):
   plt.xlabel('Predicted: %s' % predict_label)
 plt.show()
 
+print(export_dir)
+
+model.export(export_dir=export_dir, export_format=ExportFormat.TFLITE)
 
 #model.export(export_dir='/home/rencel/', export_format=ExportFormat.LABEL)
 
