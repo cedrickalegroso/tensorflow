@@ -59,8 +59,7 @@ plt.show()
 model = image_classifier.create(
     train_data,
     validation_data=validation_data,
-    epochs=num_epochs,
-    image_size=image_size
+    epochs=num_epochs
 )
 
 input_shape = (batch_size, image_size, image_size, channels)
