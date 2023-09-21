@@ -69,6 +69,6 @@ for i, (image, label) in enumerate(test_data.gen_dataset().unbatch().take(100)):
 plt.show()
 
 
-model.export(export_dir='.', export_format=ExportFormat.LABEL)
+model.export(export_dir='/home/rencel/', export_format=ExportFormat.LABEL)
 
-model.evaluate_tflite('model.tflite', test_data)
+model.evaluate_tflite('/home/rencel/model.tflite', test_data) 
