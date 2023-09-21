@@ -17,16 +17,7 @@ export_dir = '/home/rencel'
 export_dir = os.path.abspath(export_dir)
 
 
-# get the dataset from gdrive
-# Define the filename and download URL
-#filename = 'thesis_dataset.tgz'
-#download_url = 'https://drive.google.com/uc?id=your_file_id'
 
-# Use tf.keras.utils.get_file to download and extract the file
-#image_path = tf.keras.utils.get_file(filename, download_url, extract=True)
-
-
-# From Collab commented for reference only
 image_path = tf.keras.utils.get_file(
       'flower_photos.tgz',
       'https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz',
@@ -81,7 +72,7 @@ for i, (image, label) in enumerate(test_data.gen_dataset().unbatch().take(100)):
   plt.xlabel('Predicted: %s' % predict_label)
 plt.show()
 
-#print(export_dir)
+print(export_dir)
 
 model.export(export_dir=export_dir, export_format=ExportFormat.TFLITE)
 
