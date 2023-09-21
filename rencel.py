@@ -20,7 +20,7 @@ export_dir = os.path.abspath(export_dir)
 
 image_path = tf.keras.utils.get_file(
       'thesis_dataset.tgz',
-      'https://download1479.mediafire.com/psno3quv0zfgVwwQcWT5SKgcJfaKO66XW6Cv2JDwB9XZnOVZxBdzp77nn4WCWgNk5MBG0ec2slxFMgieoNp-HBv4sUHsEMOiq1cykD6CQ6dl2PGi_4w9V8slx4bbcerpMi38fqLH4gH0rSOBo8Ott-EAGmpsuFsltzwmF-VS_sJk/23p5kmzg7xwubck/thesis_dataset.tgz',
+      'https://www.mediafire.com/file/23p5kmzg7xwubck/thesis_dataset.tgz/file',
       extract=True)
 image_path = os.path.join(os.path.dirname(image_path), 'thesis_dataset')
 
