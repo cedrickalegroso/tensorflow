@@ -72,9 +72,9 @@ for i, (image, label) in enumerate(test_data.gen_dataset().unbatch().take(100)):
   plt.xlabel('Predicted: %s' % predict_label)
 plt.show()
 
-print(export_dir)
+#print(export_dir)
 
-model.export(export_dir=export_dir, export_format=ExportFormat.TFLITE)
+#model.export(export_dir=export_dir, export_format=ExportFormat.TFLITE)
 
 #model.export(export_dir='/home/rencel/', export_format=ExportFormat.LABEL)
 
