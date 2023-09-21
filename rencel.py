@@ -27,8 +27,8 @@ tflite_model_path = os.path.join(export_dir, 'model.tflite')
 # the file https://drive.google.com/file/d/1Q5AZ4j2WnARznP_Z8Vb_wipX_BlVQvCX/view?usp=sharing
 # get the dataset from gdrive
 # Define the filename and download URL
-filename = 'thesis_dataset.tgz'
-download_url = 'https://drive.google.com/uc?id=1Q5AZ4j2WnARznP_Z8Vb_wipX_BlVQvCX'
+filename = 'flower_photos.tgz'
+download_url = 'https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz'
 
 # Use tf.keras.utils.get_file to download and extract the file
 image_path = tf.keras.utils.get_file(filename, download_url, extract=True)
