@@ -62,28 +62,6 @@ model = image_classifier.create(
     epochs=num_epochs
 )
 
-input_shape = (batch_size, image_size, image_size, channels)
-n_classes = 10
-
-model = models.Sequential([
-    layers.Conv2D(32, (3, 3), activation="relu", input_shape=input_shape),
-    layers.MaxPooling2D((2, 2)),
-    layers.Conv2D(64, kernel_size=(3, 3), activation="relu"),
-    layers.MaxPooling2D((2, 2)),
-    layers.Conv2D(64, kernel_size=(3, 3), activation="relu"),
-    layers.MaxPooling2D((2, 2)),
-    layers.Conv2D(64, (3, 3), activation="relu"),
-    layers.MaxPooling2D((2, 2)),
-    layers.Conv2D(64, (3, 3), activation="relu"),
-    layers.MaxPooling2D((2, 2)),
-    layers.Conv2D(64, (3, 3), activation="relu"),
-    layers.MaxPooling2D((2, 2)),
-    layers.Flatten(),
-    layers.Dense(64, activation="relu"),
-    layers.Dense(n_classes, activation="softmax"),
-])
-model.build(input_shape=input_shape)
-
 model.summary()
 
 loss, accuracy = model.evaluate(test_data)
