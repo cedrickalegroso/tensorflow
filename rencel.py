@@ -19,10 +19,10 @@ export_dir = os.path.abspath(export_dir)
 
 
 image_path = tf.keras.utils.get_file(
-      'flower_photos.tgz',
-      'https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz',
+      'thesis_dataset.tgz',
+      'https://2021.filemail.com/api/file/get?filekey=1QyoR9kv-1drJb-Lok0RXcjE0uH4MRLAQhL5YzvDwiNq4g-NpVBiyUIoasaSAImVLK45eQ',
       extract=True)
-image_path = os.path.join(os.path.dirname(image_path), 'flower_photos')
+image_path = os.path.join(os.path.dirname(image_path), 'thesis_dataset')
 
 data = DataLoader.from_folder(image_path)
 
