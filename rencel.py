@@ -20,7 +20,7 @@ export_dir = os.path.abspath(export_dir)
 
 image_path = tf.keras.utils.get_file(
       'thesis_dataset.tgz',
-      'https://2021.filemail.com/api/file/get?filekey=1QyoR9kv-1drJb-Lok0RXcjE0uH4MRLAQhL5YzvDwiNq4g-NpVBiyUIoasaSAImVLK45eQ',
+      'https://mega.nz/file/25YD2Sqb#n5aNjeLkGuFwgKU4Kwrh1xMtQW8NhEQ9nOMw0XO3Kvo',
       extract=True)
 image_path = os.path.join(os.path.dirname(image_path), 'thesis_dataset')
 
