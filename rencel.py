@@ -31,15 +31,15 @@ filename = 'flower_photos.tgz'
 download_url = 'https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz'
 
 # Use tf.keras.utils.get_file to download and extract the file
-image_path = tf.keras.utils.get_file(filename, download_url, extract=True)
+#image_path = tf.keras.utils.get_file(filename, download_url, extract=True)
 
 
 # From Collab commented for reference only
-# image_path = tf.keras.utils.get_file(
-#       'thesis_dataset.tgz',
-#       'https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz',
-#       extract=True)
-# image_path = os.path.join(os.path.dirname(image_path), 'thesis_dataset')
+image_path = tf.keras.utils.get_file(
+      'thesis_dataset.tgz',
+      'https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz',
+      extract=True)
+image_path = os.path.join(os.path.dirname(image_path), 'thesis_dataset')
 
 data = DataLoader.from_folder(image_path)
 
