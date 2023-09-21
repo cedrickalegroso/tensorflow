@@ -13,33 +13,25 @@ from tflite_model_maker.image_classifier import DataLoader
 
 import matplotlib.pyplot as plt
 
-export_dir = '/home/gov/test1/train'
+export_dir = '/home/rencel'
 export_dir = os.path.abspath(export_dir)
 
-# settings
-num_epochs = 10
-image_size = (256, 256)
-batch_size = 70
-channels = 3
-tflite_model_path = os.path.join(export_dir, 'model.tflite')
 
-
-# the file https://drive.google.com/file/d/1Q5AZ4j2WnARznP_Z8Vb_wipX_BlVQvCX/view?usp=sharing
 # get the dataset from gdrive
 # Define the filename and download URL
-filename = 'flower_photos.tgz'
-download_url = 'https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz'
+#filename = 'thesis_dataset.tgz'
+#download_url = 'https://drive.google.com/uc?id=your_file_id'
 
 # Use tf.keras.utils.get_file to download and extract the file
 #image_path = tf.keras.utils.get_file(filename, download_url, extract=True)
 
 
-# From Collab commented for reference only
-image_path = tf.keras.utils.get_file(
-      'flower_photos.tgz',
-      'https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz',
-      extract=True)
-image_path = os.path.join(os.path.dirname(image_path), 'flower_photos')
+ From Collab commented for reference only
+ image_path = tf.keras.utils.get_file(
+       'flower_photos.tgz',
+       'https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz',
+       extract=True)
+image_path = os.path.join(os.path.dirname(image_path), 'flower_photos.tgz')
 
 data = DataLoader.from_folder(image_path)
 
@@ -56,11 +48,7 @@ for i, (image, label) in enumerate(data.gen_dataset().unbatch().take(25)):
   plt.xlabel(data.index_to_label[label.numpy()])
 plt.show()
 
-model = image_classifier.create(
-    train_data,
-    validation_data=validation_data,
-    epochs=num_epochs
-)
+model = image_classifier.create(train_data, validation_data=validation_data)
 
 model.summary()
 
@@ -93,12 +81,10 @@ for i, (image, label) in enumerate(test_data.gen_dataset().unbatch().take(100)):
   plt.xlabel('Predicted: %s' % predict_label)
 plt.show()
 
+#print(export_dir)
 
-# export
 model.export(export_dir=export_dir, export_format=ExportFormat.TFLITE)
 
-# evaluate
-model.evaluate_tflite(tflite_model_path, test_data)
+#model.export(export_dir='/home/rencel/', export_format=ExportFormat.LABEL)
 
-
-# last update cedrick 2:07 AM
+#model.evaluate_tflite('/home/rencel/model.tflite', test_data) 
