@@ -13,7 +13,7 @@ from tflite_model_maker.image_classifier import DataLoader
 
 import matplotlib.pyplot as plt
 
-export_dir = '/home/gov/test1'
+export_dir = '/home/gov/test1/train'
 export_dir = os.path.abspath(export_dir)
 
 # settings
@@ -124,4 +124,4 @@ model.export(export_dir=export_dir, export_format=ExportFormat.TFLITE)
 model.evaluate_tflite(tflite_model_path, test_data)
 
 
-# last update cedrick 2:25 AM
+# last update cedrick 2:07 AM
