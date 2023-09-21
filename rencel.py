@@ -28,10 +28,10 @@ export_dir = os.path.abspath(export_dir)
 
 # From Collab commented for reference only
 image_path = tf.keras.utils.get_file(
-       'flower_photos.tgz',
-       'https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz',
-       extract=True)
-image_path = os.path.join(os.path.dirname(image_path), 'flower_photos.tgz')
+      'flower_photos.tgz',
+      'https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz',
+      extract=True)
+image_path = os.path.join(os.path.dirname(image_path), 'flower_photos')
 
 data = DataLoader.from_folder(image_path)
 
