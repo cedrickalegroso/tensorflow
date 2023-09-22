@@ -28,7 +28,7 @@ image_path = os.path.join(os.path.dirname(image_path), 'thesis_dataset')
 
 print(image_path)
 
-data = DataLoader.from_folder(../home/rencel/)
+data = DataLoader.from_folder('../home/rencel/')
 
 train_data, rest_data = data.split(0.8)
 validation_data, test_data = rest_data.split(0.5)
