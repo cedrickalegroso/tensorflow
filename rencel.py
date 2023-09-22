@@ -14,6 +14,7 @@ from tflite_model_maker.image_classifier import DataLoader
 import matplotlib.pyplot as plt
 
 image_path = '/home/rencel'
+image_path = os.path.abspath(image_path)
 export_dir = '/home/rencel'
 export_dir = os.path.abspath(export_dir)
 
